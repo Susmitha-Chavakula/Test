@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<body>
+<?php
+
+
+if(isset($_POST['submit'])) {
+  $firstname = $_POST['fname'];
+  echo "Name: ".$firstname ."<br/>";
+  $mobile = $_POST['phone'];
+  echo "Phone Number: ".$mobile ."<br/>";
+  $courses = $_POST['course'];
+  echo "Choice of Course: ".$courses ."<br/>";
+}  
+  
+  
+?>
+</body>
+</html>

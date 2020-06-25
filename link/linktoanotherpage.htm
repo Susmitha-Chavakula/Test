@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<style>
+form{
+padding:20px;
+margin:auto;
+font-size:15px;
+}
+textbox{
+width:500px;
+font-size:20px;
+margin:auto;
+}
+</style>
+
+<body>
+
+<form name"register" action="anotherpage.php" method="post" autocomplete="off">
+  <fieldset><legend><b>Registration</b></legend>
+  <p><b>Name:</b><br><input type="text" name="fname" /></p><br>
+  
+  <label for="phone"><b>Phone Number:</b></label><br>
+  <input type="tel" id="phone" name="phone" pattern="[0-9]{5}[0-9]{5}" required><br><br>
+
+  <p><b>Choice of Courses:</b><br>
+      <input type="radio" name="course" value="bachelors" checked>Bachelors<br>
+      <input type="radio" name="course" value="masters" checked>Masters<br><br>
+
+  <label><b>Description:</b></label><br>
+  <textarea name=description" rows="5" cols="40">Write your text here!!!</textarea><br><br>
+  <p><input type="submit" name="submit" value="Submit" /></p><br><br>
+
+</form>
+</body>
+</html>
