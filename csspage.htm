@@ -1,0 +1,369 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>CSS Page</title>
+<link rel="icon" href="https://img.jakpost.net/c/2019/03/02/2019_03_02_66706_1551461528._large.jpg" type="image/x-icon">
+<style>
+*{
+  margin:0;
+  padding:0;
+}
+body{
+   background-color:#f4f4f4;
+   color:#555555;
+   
+   font: normal 16px Georgia, serif;
+
+   line-height:1.6em;
+   margin:0;
+}
+
+.navi {
+  background-color: #3cb371;
+  padding:15px 15px;
+  margin: 15px 0;
+  word-spacing:250px;
+}
+.navi a{
+  background-color:#fff;
+  color:black;
+  word-spacing:0;
+  
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color:violet;
+}
+a:active{
+    color:yellow;
+}
+a.visited{
+    color:hotpink;
+}
+    
+.bucket{
+   width:80%;
+   margin:auto;
+}
+
+.button{
+   background-color:hotpink;
+   color:#333;
+   padding:5px 10px;
+   border:none;
+}
+.button:hover{
+   background:green;
+   color:#333;
+}
+
+.box{
+   background-color:#3cb371;
+   color:#fff;
+
+   border-width:3px;
+   border-bottom-width:10px;
+   border-top-style:dotted;
+   border: 5px grey solid; 
+   border-radius:10px;
+   
+   padding:15px;
+   margin-top:15px;
+   margin:15px 0;
+
+   text-align:center;
+}
+
+.box h2{
+   font-family:Palatino Linotype;
+   font-weight:800;
+   font-style:italic;
+   text-decoration:underline;
+   text-transform:uppercase;
+}
+
+.tub{
+   border:3px dotted #bbb;
+   padding:15px;
+   margin:15px 0;
+}
+.tub h1{
+    font-family:Comic Sans MS;
+    font-weight:500;
+    font-style:italic;
+    text-decoration:underline;
+}
+
+.styled{
+    border:3px dotted #bbb;
+    padding:15px;
+}
+.styled h1{
+    font-family:Lucida Sans Unicode;
+    font-weight:500;
+    font-style:italic;
+    text-decoration:underline;
+}
+
+
+.list-item h2{
+   font-family:Palatino Linotype;
+   font-weight:800;
+   font-style:italic;
+   text-decoration:underline;
+   text-transform:uppercase;
+}
+ol {
+   list-style: none;
+   counter-reset: my-counter;
+}
+li {
+    counter-increment: my-counter;
+    margin:1em;
+}
+li::before {
+  content: counter(my-counter);
+  background: #bbb;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: inline-block;
+  line-height: 2rem;
+  color: white;
+  text-align: center;
+  margin-right: 0.5rem;
+}
+ol ol li::before {
+  background: #6a5acd;
+}
+ol ol ol li::before {
+  background: #EE9EFF;
+}
+
+.register-form{
+    padding:15px;
+}
+.register-form .form-fill{
+   padding-bottom:15px;
+}
+.register-form label{
+   display:block;
+}
+.register-form input[type="text"], .register-form input[type="tel"], .register-form textarea{
+   padding:8px;
+   width:100%;
+}
+
+.p-boxed{
+   width:1000px;
+   height:100px;
+   border:1px solid #000;
+   padding:15px;
+   margin:15px 0;
+   position:relative;
+   background-image:url('https://i.pinimg.com/originals/e2/71/fd/e271fda72f1e158b5f0569cc72d36d7f.jpg');
+   background-repeat: no-repeat;
+   background-position:100px 200px;
+   background-position:center top;
+   line-height: 0.01em;
+}
+.p-boxed h2{
+   position:absolute;
+   bottom:40px;
+   right:100px;
+}
+.p-boxed h3{
+   position:absolute;
+   bottom:30px;
+   right:100px;
+}
+
+.invent{
+   border-collapse: collapse;
+   border-spacing: 0;
+   width: 100%;
+   border: 1px solid #ddd;
+   padding:15px;
+   margin:15px 0;
+}
+.invent tr:nth-child(even) {
+   background-color:#A9A9A9;
+}
+.invent th{
+   opacity:0.6;
+   background-color:#ee82ee;
+   color:blue;
+}
+.invent td p{
+   float:right;
+}
+
+
+.hides p {
+  display: none;
+}
+footer{
+   background-color:#3cb371;
+   color:#fff;
+
+   border-width:3px;
+   border-bottom-width:10px;
+   border-style:dotted;
+   border: 5px grey solid; 
+   border-radius:10px;
+   
+   padding:15px;
+   margin-top:15px;
+   margin:15px 0;
+
+   text-align:center;
+}
+</style>
+</head>
+ 
+<body> 
+ 
+ <div class="bucket">
+   <div class="navi">
+      <a href="Home" target="_self">Home</a>
+      <a href="#Registration Form">Register</a>
+      <a href="#Contact">Personal Details</a>
+   </div>
+   <div class="box">
+      <h2>Chavakula Susmitha</h2>
+      <h3>SRKR Engineering College</h3>
+      <h4>Electronics and Communication Engineering</h4>
+      <a href= "https://github.com/Susmitha-Chavakula">GitHub Page</a>
+  </div>
+ 
+   <div class="tub">
+      <h1>Understainding HTML</h1>
+      <p>HTML stands for <b>Hyper Text Markup Language</b>. It is the standard markup language for creating Web pages. Site authors use HTML to format text as titles and headings, to arrange graphics on a webpage, to link to different pages within a website, and to link to different websites. It describes the structure of a Web page. It consists of a series of elements. It's elements tell the browser how to display the content. The purpose of a web browser(Chrome, Edge, Firefox, Safari) is to read HTML documents and display them correctly. A browser does not display the HTML tags, but uses them to determine how to display the document. Since the early days of the World Wide Web, there have been many versions of HTML(present HTML 5 standard). </p>
+  </div>
+    <div class="styled">
+      <h1>Understainding CSS</h1>
+      <p>CSS is a language that describes the style of an HTML document. CSS describes how HTML elements should be displayed. CSS stands for <b>Cascading Style Sheets</b>. CSS describes how HTML elements are to be displayed on screen, paper, or in other media. CSS saves a lot of work. It can control the layout of multiple web pages all at once. External stylesheets are stored in CSS files. </p>
+    </div>
+
+    <div class="list-item">
+      <h2>Adavantages:</h2>
+      <ol>
+       <li>HTML<ol>
+          <li>Easy</li>
+          <li>Fast to learn</li>
+          <li>Efficient web pages</li>
+        </ol></li>
+        <li>CSS<ol>
+           <li>Add styles to web pages</li>
+           <li>Neat and Attractive</li>
+        </ol></li>
+       </ol>
+
+   <form class="register-form" target="_blank">
+      <p> <a name="Registration Form"><h2> Registration Form:</h2></a></p>
+      <div class="form-fill">
+          <label>Name: </label>
+          <input type="text" name="name">
+      </div>
+      <div class="form-fill">
+          <label>Email: </label>
+          <input type="text" name="email">
+      </div>    
+      <div class="form-fill">
+          <label>Phone: </label>
+          <input type="tel" name="phone" pattern="[0-9]{10}">
+      </div>
+      <div class="form-fill">
+          <label>Choice of Course: </label>
+          <input type="radio" name="course" value="bachelors">
+          <label>Bachelors</label>
+          <input type="radio" name="course" value="masters">
+          <label>Masters</label>
+      </div>
+      <div class="form-fill">
+          <label>Description:</label>
+          <textarea name="description">Write your text here!!!</textarea>
+      </div>
+      <div class="form-fill">
+          <label>Subject Interests:</label>
+          <input type="checkbox" name="course1" value="html">
+          <label>HTML</label>
+          <input type="checkbox" name="course1" value="css">
+          <label>CSS</label>
+       </div>   
+      <input class="button" type="submit" value="Submit">
+    </form>
+  
+    <div class="p-boxed">
+         <h2>Enjoy</h2>
+         <h3>Learning</h3>
+    </div>        
+    
+    <div class="invent">
+    <h2>Marks of Previous Semester</h2>
+
+<table style="width:100%">
+  <tr>
+    <th>Subjects</th>
+    <th>Marks</th>
+  </tr>
+  <tr>
+    <td>Pulse and Digital Circuits</td>
+    <td><p>85</p></td>
+  </tr>
+  <tr>
+    <td>Linear ICs and Applications</td>
+    <td><p>83</p></td>
+  </tr>
+  <tr>
+    <td>Electronics Measurements and Instrumentation</td>
+    <td><p>87</p></td>
+  </tr>
+  <tr>
+    <td>Digital Communication</td>
+    <td><p>82</p></td>
+  </tr>
+  <tr>
+    <td>Antennas and Propagation</td>
+    <td><p>76</p></td>
+  </tr>
+  <tr>
+    <td>Computer Network Engineering</td>
+    <td><p>78</p></td>
+  </tr>
+  <tr>
+    <td>Problem Solving and Linguistic Competence</td>
+    <td><p>79</p></td>
+  </tr>
+  <tr>
+    <td>Basic Coding Lab</td>
+    <td><p>94</p></td>
+  </tr>
+  <tr>
+    <td>Linear Integrated Circuits and Pulse Circuits Lab with Simulation</td>
+    <td><p>95</p></td>
+  </tr>
+  <tr>
+    <td>Digital ICs Laboratory with Simulation</td>
+    <td><p>95</p></td>
+  </tr>
+</table>
+  </div>
+  <div class="hides">
+        <p>This is hidden.</p>
+  </div>
+ <footer>
+  <div class="contact">
+      <p> <a name="Contact"><h2>Personal Details:</h2></a></p>
+      <p><h4>Ch.Susmitha</h4></p>
+      <p>Mobile Number: +91 7981081433</p>
+      <p>Email: chsusmitha99@gmail.com</p>
+  </div>   
+ </footer> 
+</div>
+ 
+<div style="margin-top:500px;"></div>   
+</body>
+</html>
