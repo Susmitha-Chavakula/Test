@@ -1,0 +1,221 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Link JavaScript To HTML</title>
+
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse:collapse;
+  margin-left:20px;
+  width:auto;
+  padding:5px;
+}
+
+h3 {
+  margin-bottom:3px;
+}
+form{
+padding:20px;
+margin:auto;
+font-size:15px;
+}
+
+</style>
+<p id = "demo"></p>
+<script>
+function validateForm() {
+   var x, text;
+   x = document.getElementById("numb").value;
+   if (isNaN(x) || x < 1 || x > 10) {
+	text = "Phone number should only be numbers";
+    }  
+    document.getElementById("demo").innerHTML = text;
+}
+
+
+ 	function validate() {
+       var valid = false;
+        if(document.getElementById("c").checked){
+		valid = true;
+	}
+	else if(document.getElementById("ds").checked){
+		valid = true;
+	}
+	else if(document.getElementById("ss").checked){
+		valid = true;
+	}
+	else if(document.getElementById("stld").checked){
+		valid = true;
+	}
+        else if(document.getElementById("vlsi").checked){
+		valid = true;
+	}
+  		else{
+		alert("Please select atlest one course");
+		return false;
+	}
+	}
+
+
+</script>	
+</head>
+<body>
+    <h1>Hello World</h1>
+    <script src="JavaScript.js"></script>
+    <table id="countit">
+  <tr>
+    <th>Subjects</th>
+    <th>Marks</th>
+  </tr>
+  <tr>
+    <td>Pulse and Digital Circuits</td>
+    <td class="countme">85</td>
+  </tr>
+  <tr>
+    <td>Linear ICs and Applications</td>
+    <td class="countme">83</td>
+  </tr>
+  <tr>
+    <td>Electronics Measurements and Instrumentation</td>
+    <td class="countme">87</td>
+  </tr>
+  <tr>
+    <td>Digital Communication</td>
+    <td class="countme">82</td>
+  </tr>
+  <tr>
+    <td>Antennas and Propagation</td>
+    <td class="countme">76</td>
+  </tr>
+  <tr>
+    <td>Computer Network Engineering</td>
+    <td class="countme">78</td>
+  </tr>
+  <tr>
+    <td>Problem Solving and Linguistic Competence</td>
+    <td class="countme">79</td>
+  </tr>
+  <tr>
+    <td>Basic Coding Lab</td>
+    <td class="countme">94</td>
+  </tr>
+  <tr>
+    <td>Linear Integrated Circuits and Pulse Circuits Lab with Simulation</td>
+    <td class="countme">95</td>
+  </tr>
+  <tr>
+    <td>Digital ICs Laboratory with Simulation</td>
+    <td class="countme">95</td>
+  </tr>
+  
+</table>
+	<script language="javascript" type="text/javascript">
+	   
+            var tds = document.getElementById('countit').getElementsByTagName('td');
+ 	    var sum = 0;
+            var k = 0; 
+	    var n = 0;
+	    function total(tds) { 
+                 var sum = 0;
+                 var k = 0;
+                for(var i = 0; i < tds.length; i++) {
+		if(tds[i].className == 'countme') {
+		    sum += isNaN(tds[i].innerHTML) ? 0 : parseInt(tds[i].innerHTML);
+			k += 1;
+		}
+	      } 
+                if(n == 0){
+		   n += 1;
+	        return sum;
+		}
+                else {
+                return k;
+		}
+            }
+             sum=(total(tds));
+	     k=(total(tds));
+	    document.getElementById('countit').innerHTML += '<tr><td>Total Marks</td><td>' + sum + '</td></tr>';
+	    document.getElementById('countit').innerHTML += '<tr><td>Average</td><td>' + sum/k + '</td></tr>';
+	</script>	
+
+	
+         <h3>Registration Form</h3>
+<div class="rform">
+<h5>Default values are shown here.</h5>
+<form name="register" onsubmit="return validate()">
+  <label for="name"><b>Name:</b></label><br>
+  <input type="text" id="name" name="name" value="Joe" required><br><br>
+
+   <label for="phone"><b>Phone Number:</b></label><br>
+  <input type="tel" id="phone" name="phone" value="1234567890" pattern="[0-9]{5}[0-9]{5}"><br><br>
+
+  <label for="course"><b>Choice of Course:</b></label><br>
+  <input type="radio" id="bachelors" name="Choice-of-Course" value="bachelors">
+  <label for="bachelors">Bachelors</label><br>
+  <input type="radio" id="masters" name="Choice-of-Course" value="masters">
+  <label for="masters">Masters</label><br><br>
+ 
+ 
+    
+  <p>Please select at least one course</p>
+  
+  <label><b>Subject Interests:</b></label><br>
+  <input type="checkbox" id="c" name="Course-Selected" value="C"> C Programming</input><br>
+  <input type="checkbox" id="ds" name="Course-Selected" value="DS"> Data Structures</input><br>
+  <input type="checkbox" id="ss"name="Course-Selected" value="SS"> SS</input><br>
+  <input type="checkbox" id="stld" name="Course-Selected" value="STLD"> Switching Theory and Logic Design</input><br>
+  <input type="checkbox" id="vlsi" name="Course-Selected" value="VLSI"> VLSI</input><br>
+  
+    
+<input type="submit" value="next"><br>
+</form>
+</div>         
+
+<FORM NAME="joe">
+<INPUT TYPE="hidden" NAME="burns">
+</FORM>
+
+<SCRIPT LANGUAGE="javascript">
+
+var locate = window.location
+document.joe.burns.value = locate
+
+var text = document.joe.burns.value
+
+function delineate(str)
+{
+theleft = str.indexOf("=") + 1;
+theright = str.lastIndexOf("&");
+return(str.substring(theleft, theright));
+}
+document.write("Name is " +delineate(text));
+</script>
+
+<FORM Phone="1234567890">
+<INPUT TYPE="hidden" Phone="burns">
+</FORM>
+
+<SCRIPT LANGUAGE="javascript">
+
+var locate = window.location
+document.1234567890.burns.value = locate
+
+var tel = document.1234567890.burns.value
+
+function delineate1(str)
+{
+theleft = str.indexOf("=") + 1;
+theright = str.lastIndexOf("&");
+return(str.substring(theleft, theright));
+}
+document.write("Phone is " +delineate(tel));
+</script>
+
+
+   	
+
+
+
+</body>
+</html>
