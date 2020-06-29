@@ -14,24 +14,3 @@ console.log(Math.sqrt(9));
 console.log(Math.abs(-5.9));
 console.log((6.4), Math.ceil(6.4), Math.round(6.4), Math.floor(6.4));
 console.log(Math.sin(60 * Math.PI / 180));
-
-<FORM NAME="joe">
-<INPUT TYPE="hidden" NAME="burns">
-</FORM>
-
-<SCRIPT LANGUAGE="javascript">
-
-var locate = window.location
-document.joe.burns.value = locate
-
-var text = document.joe.burns.value
-
-function delineate(str)
-{
-theleft = str.indexOf("=") + 1;
-theright = str.lastIndexOf("&");
-return(str.substring(theleft, theright));
-}
-document.write("First Name is " +delineate(text));
-
-</SCRIPT>
