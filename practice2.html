@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Practice</title>
+
+<style>
+.tab {
+   overflow: hidden;
+   border: 1px solid #ccc;
+   background-color: #f1f1f1;
+}
+.tab button {
+   background-color: inherit;
+   float: center;
+   border: none;
+   outline: none;
+   cursor: pointer;
+   padding: 14px 16px;
+   tansition: 0.3s;
+   font-size:17px;
+}
+.tab button:hover {
+   background-color: grey;
+}
+.tab button.active {
+   background-color: #A9A9A9;
+}
+.tabcontent {
+   display: none;
+   padding: 6px 12px;
+   border: 1px solid #ccc;
+   border-top: none;
+}
+</style>
+
+</head>
+
+<body>
+	<p>A format for date is shown. Select your required date.</p>
+	<input type="date" id="anyDate" value="">
+	<p>Click the button to get the date of the date field.</p>
+	<button onclick="myFunction()">Display Date here and also on console</button>
+	<p id="demo"></p>
+	<script>	
+	function myFunction() {
+		var x = document.getElementById("anyDate").value;
+		document.getElementById("demo").innerHTML = x;
+		console.log(x);
+	}
+	</script>
+
+	<div class="tab">
+ 	   <button class="tablinks" onclick="openContent(event, 'HTML')" id="defaultOpen">HTML</button>
+	   <button class="tablinks" onclick="openContent(event, 'CSS')">CSS</button>
+	   <button class="tablinks" onclick="openContent(event, 'JS')">JS</button>
+	</div>
+	<div id="HTML" class="tabcontent">
+	    <h3>HTML</h3>
+	    <p>HTML stands for <b>Hyper Text Markup Language</b>. It is the standard markup language for creating Web pages. Site authors use HTML to format text as titles and headings, to arrange graphics on a webpage, to link to different pages within a website, and to link to different websites. It describes the structure of a Web page. It consists of a series of elements. It's elements tell the browser how to display the content. The purpose of a web browser(Chrome, Edge, Firefox, Safari) is to read HTML documents and display them correctly. A browser does not display the HTML tags, but uses them to determine how to display the document. Since the early days of the World Wide Web, there have been many versions of HTML(present HTML 5 standard). </p>
+	</div>
+	<div id="CSS" class="tabcontent">
+	    <h3>CSS</h3>
+            <p>CSS is a language that describes the style of an HTML document. CSS describes how HTML elements should be displayed. CSS stands for <b>Cascading Style Sheets</b>. CSS describes how HTML elements are to be displayed on screen, paper, or in other media. CSS saves a lot of work. It can control the layout of multiple web pages all at once. External stylesheets are stored in CSS files. </p>
+	</div>
+	<div id="JS" class="tabcontent">
+	    <h3>JS</h3>
+	    <p>JavaScript is the programming language of HTML and the Web. It is easy to learn. Web pages are not the only place where JavaScript is used. Many desktop and server programs use JavaScript. Node.js is the best known. Some databases, like MongoDB and CouchDB, also use JavaScript as their programming language. It is mainly used to link pages. </p>
+	</div>
+	<script>
+	function openContent(event, lang) {
+	     var i, tabcontent, tablinks;
+	     tabcontent = document.getElementsByClassName("tabcontent");
+	     for ( i = 0; i < tabcontent.length; i++) {
+		tabcontent[i].style.display = "none";
+	     }
+    	     tablinks = document.getElementsByClassName("tablinks");
+	     for ( i = 0; i < tablinks.length; i++) {
+		tablinks[i].className = tablinks[i].className.replace(" active", "");
+	     }
+	     document.getElementById(lang).style.display = "block";
+	     event.currentTarget.className += " active";
+	    }
+	    document.getElementById("defaultOpen").click();
+	</script>
+
+	<p id="dem"></p>
+	<script>
+	var str = "HTML stands for Hyper Text Markup Language. It is the standard markup language for creating Web pages. Site authors use HTML to format text as titles and headings, to arrange graphics on a webpage, to link to different pages within a website, and to link to different websites. It describes the structure of a Web page. It consists of a series of elements. It's elements tell the browser how to display the content. The purpose of a web browser(Chrome, Edge, Firefox, Safari) is to read HTML documents and display them correctly. A browser does not display the HTML tags, but uses them to determine how to display the document. Since the early days of the World Wide Web, there have been many versions of HTML(present HTML 5 standard).";
+	var k = 0;
+	var i;
+	for ( i = 0; k<4; i++) {
+		if(str[i] == ' ' || str[i] == '.') {
+			k++;
+	}
+	}
+	var res = str.slice(i, str.indexOf(" ",i));
+	document.getElementById("dem").innerHTML = "5<sup>th</sup> word in HTML description is '" +res + "'";
+	</script>
+	<p id="dem1"></p>
+	<script>
+	var str = "HTML stands for Hyper Text Markup Language. It is the standard markup language for creating Web pages. Site authors use HTML to format text as titles and headings, to arrange graphics on a webpage, to link to different pages within a website, and to link to different websites. It describes the structure of a Web page. It consists of a series of elements. It's elements tell the browser how to display the content. The purpose of a web browser(Chrome, Edge, Firefox, Safari) is to read HTML documents and display them correctly. A browser does not display the HTML tags, but uses them to determine how to display the document. Since the early days of the World Wide Web, there have been many versions of HTML(present HTML 5 standard).";
+	
+	var k = 0;
+	var i;
+	for ( i = 0; k<6; i++) {
+		if(str[i] == ' ' || str[i] == '.') {
+			k++;
+	}
+	}
+	var res = str.slice(i, str.indexOf(" ",i));
+	document.getElementById("dem1").innerHTML = "7<sup>th</sup> word in HTML description is '" +res + "'.";
+	</script>
+	<p id="dem2"></p>
+	<script>
+	var str = "HTML stands for Hyper Text Markup Language. It is the standard markup language for creating Web pages. Site authors use HTML to format text as titles and headings, to arrange graphics on a webpage, to link to different pages within a website, and to link to different websites. It describes the structure of a Web page. It consists of a series of elements. It's elements tell the browser how to display the content. The purpose of a web browser(Chrome, Edge, Firefox, Safari) is to read HTML documents and display them correctly. A browser does not display the HTML tags, but uses them to determine how to display the document. Since the early days of the World Wide Web, there have been many versions of HTML(present HTML 5 standard).";
+	
+	var k = 0;
+	var i;
+	for ( i = 0; k<9; i++) {
+		if(str[i] == ' ' || str[i] == '.') {
+			k++;
+	}
+	}
+	var res = str.slice(i, str.indexOf(" ",i));
+	document.getElementById("dem2").innerHTML = "10<sup>th</sup> word in HTML description is '" +res + "'.";
+	</script>
+
+	<p></p><br>
+	<p>Enter a number to check its range.</p>
+	<input id="demo2" type="text">
+	<button type="button" onclick="fun()">Test Input</button>
+	
+	
+	<p id="p03"></p>
+	<script>
+	
+	function fun() {
+		var num, message;
+		
+		message = document.getElementById("p03");
+		message.innerHTML = "";
+		num = document.getElementById("demo2").value;
+	        var c = 0;
+		try { 
+		if( num == "") throw "empty";
+		if(isNaN(num)) throw "not a number";
+		num = Number(num);
+	        switch (c) {
+		case 0:	if(num > 10 && num < 100) { throw num + " is between 10 and 100!";
+		}
+		else {
+			c += 1; 
+		}
+		case 1 :
+		        throw num + " is not sbetween 10 and 100!";
+        }
+	}
+	catch(err) {
+		message.innerHTML = "Input is " + err;
+	  }
+	finally {
+		alert('Function executed successfully!')
+	}
+	}
+      	</script>
+	
+	<br>
+	<p>A default value as zero is shown. Change the number for which you want fibnoicci series.</p>
+	<input type="number" id="anyNumb" value="0">
+	
+	<button onclick="fun1()">Get result on console</button>
+	<p id="demo3"></p>
+	<script>
+		function fun1() {
+		var numb;
+		numb = document.getElementById("anyNumb").value;
+	   
+		var f1 = 0;
+		var f2 = 1;
+		var f = 0;
+		console.log(f1);
+		console.log(f2);		
+   		for (var i = 2; i < numb ; i++) {
+			f = f1 + f2;
+			console.log(f);			
+			f1 = f2;
+			f2 = f;
+		}
+	}
+	</script>
+</body>
+</html>
