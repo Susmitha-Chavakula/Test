@@ -1,0 +1,114 @@
+﻿* { 
+    margin : 0;
+    padding : 0;
+ }
+
+.page-heading h1 {
+    font-family : Times new roman, serif;
+    font-size : 33px;
+    font-weight : 745;
+    color : green;
+    text-transform : uppercase;
+    text-decoration : underline;
+    text-align : center;
+    margin-top : 14px;    
+}
+
+.caption {
+    height : 146vh;
+ }
+
+.navbar-style {
+    box-shadow : 0 5px 10px black;
+    text-transform : uppercase;
+}
+
+.my-site-logo {
+    height : 52px;
+    padding : 3.9px 9px;
+}
+
+.icon-bar {
+    background : skyblue;
+}
+
+li a {
+    color : black;
+}
+
+.texthere h1{ 
+    margin-left : 110px;
+    font-family : Georgia, serif;
+    font-size : 3rem;
+    text-align :left;
+}
+.imagehere {
+    
+   float  : right;
+}
+
+h1 {
+  text-align : center ;
+  text-deocration : underline;
+  text-transform :uppercase;
+}
+
+.tub{
+   border:3px dotted #bbb;
+   padding:15px;
+   margin:15px 0;
+}
+.tub h1{
+    font-family:Comic Sans MS;
+    font-weight:500;
+    font-style:italic;
+    text-decoration:underline;
+}
+
+.styled{
+    border:3px dotted #bbb;
+    padding:15px;
+}
+.styled h1{
+    font-family:Lucida Sans Unicode;
+    font-weight:500;
+    font-style:italic;
+    text-decoration:underline;
+}
+
+footer{
+   background-color:lightpink;
+   color:#fff;
+   border-width:3px;
+   border-bottom-width:10px;
+   border-style:dotted;
+   border: 5px grey solid; 
+   border-radius:10px;
+   
+   padding:15px;
+   margin-top:15px;
+   margin:15px 0;
+
+   text-align:right;
+}
+
+section {
+    background: lightblue;
+    padding: 6px;
+    float: left;
+    font-family : arial;
+    font-size : 17px;
+    font-weight : bold;
+}
+
+.button{
+   background-color: violet;
+   padding:5px 10px;
+   border:none;
+   border-radius : 5px;
+}
+.button:hover{
+   background:green;
+   color:#333;
+}
+

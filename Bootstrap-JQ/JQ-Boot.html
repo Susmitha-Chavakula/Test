@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Responsive Website</title>
+	<link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ0YBMKR0PTUXYaRiKorRqXYEhcNBtv2zao5g&usqp=CAU" type="image/x-icon">
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	
+
+	<header class = "caption">
+		<nav class = "navbar navbar-style">
+		     <div class = "cont">
+			<div class = "navbar-caption">
+			    <div class = "page-heading">
+				<h1>Web Page Tutorial</h1>
+			    </div>
+
+			    <button type = "button" class = "navbar-toggle" data-toggle = "collapse" data-target="#mico">
+				<span class = "icon-bar"></span>
+				<span class = "icon-bar"></span>
+				<span class = "icon-bar"></span>
+			    </button>
+			
+ 			
+	
+			<img class = "my-site-logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQnKLgDGgvSP3yFNcWmi6DLkAitfyBSloc-cw&usqp=CAU">
+			</div>
+			
+			<div class = "collapse navbar-collapse" id="mico">
+			<ul class = "nav navbar-nav navbar-right">
+			<li><a href=""></a></li>
+			<li><a href="#home">Home</a></li>
+			<li><a href="#Content">Content</a></li>
+			<li><a href="#Contact">Contact Us</a></li>
+			</ul>
+			</div>     
+		</nav><br><br>
+		<div class = "texthere" >
+			<h1><i>Happy Learning!!!</i></h1>
+		 </div>
+	  	<div class = "imagehere">
+		<img src="https://images.ctfassets.net/cnu0m8re1exe/8mNFyn7Fn15xx8g3lygAp/99f4534bd491f7259fea75f36c67700b/shutterstock_618062045.jpg?w=650&h=433&fit=fill" class="img-responsive">
+                </div>
+     		
+	</div>
+	</div>
+	
+
+	</header>	
+    <a name = "Content"></a>
+     <h1>Content!!!</h1>
+        <div class="tub">
+      <h1>Understainding HTML</h1>
+      <p>HTML stands for <b>Hyper Text Markup Language</b>. It is the standard markup language for creating Web pages. Site authors use HTML to format text as titles and headings, to arrange graphics on a webpage, to link to different pages within a website, and to link to different websites. It describes the structure of a Web page. It consists of a series of elements. It's elements tell the browser how to display the content. The purpose of a web browser(Chrome, Edge, Firefox, Safari) is to read HTML documents and display them correctly. A browser does not display the HTML tags, but uses them to determine how to display the document. Since the early days of the World Wide Web, there have been many versions of HTML(present HTML 5 standard). </p>
+     </div>
+     <div class="styled">
+      <h1>Understainding CSS</h1>
+      <p>CSS is a language that describes the style of an HTML document. CSS describes how HTML elements should be displayed. CSS stands for <b>Cascading Style Sheets</b>. CSS describes how HTML elements are to be displayed on screen, paper, or in other media. CSS saves a lot of work. It can control the layout of multiple web pages all at once. External stylesheets are stored in CSS files. </p>
+    </div>
+	<br>
+	<div>
+  	<section>*****Bootstrap</section> <section>makes</section> <section>web</section> <section>pages</section> <section>responsive!!!!</section>
+    </div><br><br>
+    
+    <button class="button" id="erase">Hide above line</button><br><br>
+    <button class="button" id="showme">Display the hidden content</button>
+    
+   <script>
+   
+     $( "#erase" ).click(function() { $( "section:last-child" ).hide( "slow", function() {
+     		 $( this ).prev().hide( "slow", arguments.callee );
+        });});
+	var buttonclick;
+     $("#erase").click(function() {
+       if(buttonclick != true) {
+	    alert( "Contents will be hidden!!!!Click ok to proceed" );
+     }
+    });
+           
+            $( "#showme" ).click(function() { $( "section" ).show( 1947 );});
+		var buttonclick;
+     $("#showme").click(function() {
+       if(buttonclick != true) {;
+	    alert( "Hidden contents will be displayed!!!!Click ok to proceed" );
+     }
+    });
+   </script>
+
+     <footer>
+   <a name="Contact"></a>
+   <div class="contact">
+      <p> <a name="Contact"><h2>Personal Details:</h2></a></p>
+      <p><h4>Ch.Susmitha</h4></p>
+      <p>Mobile Number: +91 7981081433</p>
+      <p>Email: chsusmitha99@gmail.com</p>
+  </div>   
+ </footer> 
+   
+</body>
+</html>
