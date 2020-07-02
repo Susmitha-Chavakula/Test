@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+<script
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+</script>
+<script>
+function comehere() {
+      $(document).ready(function() {
+	    $("button").dblclick(function() {
+		alert("You double-clicked the button.");
+	     
+	var tex = document.getElementById("name").value;
+	document.write('Hey <b><i>'+tex+'</i></b>!!! Today is Thursday. Have a nice day....');
+	});
+	 });
+}
+</script>
+    
+<script>
+$(document).ready(function(){
+  $("#togg").click(function(){
+    $("p").toggle(580);
+  });
+});
+</script>
+
+<script>
+$(document).ready(function() {
+   $(".but1").click(function() {
+ 	$("i").fadeOut(2020);
+		alert('The italic content will be faded-out!!');
+   });
+   $(".but2").click(function() {
+         $("i").fadeIn(20);
+		alert('The italic content will be faded-in!!');
+   });
+});
+</script>
+
+<script>
+$(document).ready(function(){
+  $("#ftogg").click(function(){
+    $("#darker").fadeToggle("fast");
+    $("#lessdarker").fadeToggle("slow");
+    $("#medium").fadeToggle(3000);
+    $("#lighter").fadeToggle("milliseconds");
+  });
+});
+</script>
+<script>
+$(document).ready(function(){
+  $("#ftogg1").click(function(){
+    $("#darker").fadeTo("slow", 0.3);
+    $("#lessdarker").fadeTo("fast",0.06 );
+    $("#medium").fadeTo("slow",0.11);
+    $("#lighter").fadeTo("fast",0.19);
+  });
+});
+</script>
+
+<script>
+      $(document).ready(function() {
+          $("#data1").click(function() {
+		$.post("dem_post.asp",
+		{
+		  name: "Susmitha",
+		  email: "chsusmitha99@gmail.com"
+		},
+		function(data,status){
+       			alert("Data: " + data + "\nStatus: " + status);
+		});
+	     });
+	});
+</script>
+
+</head>
+
+<body>
+
+Your Name : <input type="text" id="name" value=""><br><br>
+<button onmouseover="comehere()">Double-click here</button>
+
+<h4>You can toggle the below content.</h4>
+<div>
+<p>The toggle() method toggles between hide() and show() for the selected elements. This method checks the selected elements for visibility. show() is run if an element is hidden. hide() is run if an element is visible - This creates a toggle effect. Hidden elements will not be displayed at all (no longer affects the layout of the page). This method can also be used to toggle between custom functions. </p>
+<button id="togg">Click to toggle</button></div>
+
+<h4>jQuery Fading Methods</h4>
+<p>With jQuery you can fade an element in and out of visibility.</p>
+<p>jQuery has the following fade methods:</p>
+   <ul><li>fadeIn()</li>
+       <li>fadeOut()</li>
+       <li>fadeToogle()</li>
+       <li>fadeTo()</li></ul>
+
+<h5>You can fadeIn() & fadeOut() the below content</h5>
+<i>The jQuery fadeIn() & fadeOut() methods are used to fade in a hidden & fade out a visible element.</i><h6></h6>
+<button class="but1">Fade Out</button>
+<button class="but2">Fade In</button>
+
+<h5>You can fadeToggle() & fadeTo() below</h5>
+<div id="darker" ><img src="https://www.colorhexa.com/013220.png" style="width:80px; height:80px;"></div>
+<div id="lessdarker"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSYCIb2M0LXyPkAtuuQ406Sqwjftu_TjdYRSw&usqp=CAU" style="width:80px; height:80px;"></div>
+<div id="medium" ><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTkmWW98fhARJJYXmArCBEqcnYsqgDyVN6Rzw&usqp=CAU" style="width:80px; height:80px;"></div>
+<div id="lighter" ><img src="https://www.colorhexa.com/90ee90.png" style="width:80px; height:80px;"></div><h6></h6>
+<button id="ftogg">Click to fade in/out</button>
+<button id="ftogg1">Click to fade to</button>
+
+
+<h3>JQuery Get Request Data</h3>
+
+<button id="data1">Send request & retrive</button>
+
+</body>
+</html>
